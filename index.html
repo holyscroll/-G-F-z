@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>-g-f-z by zeuosageenti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">-g-f-z</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/zeuosageenti/-G-F-z" class="btn">View on GitHub</a>
+      <a href="https://github.com/zeuosageenti/-G-F-z/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/zeuosageenti/-G-F-z/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="teleseed" class="anchor" href="#teleseed" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://telegram.me/TeleSeed">TeleSeed</a>
+</h1>
+
+<p><a href="https://gitter.im/SEEDTEAM/TeleSeed?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/SEEDTEAM/TeleSeed.svg" alt="Join the chat at https://gitter.im/SEEDTEAM/TeleSeed"></a></p>
+
+<p><strong>An advanced and powerful administration bot based on <a href="https://github.com/yagop/telegram-bot">yagop/telegram-bot</a> licensed under the <a href="https://github.com/SEEDTEAM/TeleSeed/blob/master/LICENSE">GNU General Public License</a></strong>.</p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li><strong>A powerful antispam system with custom sensitivity for each group</strong></li>
+<li><strong>Multiple realms (admin groups)</strong></li>
+<li><strong>Recalcitrant to any kind of spamming (X/Y bots, name/photo changers, etc.)</strong></li>
+<li><strong>Global banning</strong></li>
+<li><strong>Broadcast to all groups</strong></li>
+<li><strong>Group links</strong></li>
+<li><strong>Kick, ban and unban by reply</strong></li>
+<li><strong>Groups, ban and global ban list</strong></li>
+<li><strong>Logging anything that happens in a group</strong></li>
+<li><strong>Invitation by username</strong></li>
+<li><strong>Group administration via private messages</strong></li>
+<li><strong>Only mods, owner and admin can add bots</strong></li>
+<li><strong>Arabic lock</strong></li>
+<li><strong>And more!</strong></li>
+</ul>
+
+<p><strong>Table of Contents</strong></p>
+
+<ul>
+<li><a href="#teleseed">TeleSeed</a></li>
+<li><a href="#features">Features</a></li>
+<li>
+<a href="#commands">Commands</a>
+
+<ul>
+<li>
+<a href="#admins-commands">Admins commands</a>
+
+<ul>
+<li><a href="#realm-creation">Realm creation</a></li>
+<li><a href="#group-creation">Group creation</a></li>
+<li><a href="#add-or-remove-realms">Adding and removing realms</a></li>
+<li><a href="#add-or-remove-groups">Adding and removing groups</a></li>
+<li><a href="#leaving">Leaving groups</a></li>
+<li><a href="#everything-about-groups">Everything about groups</a></li>
+<li><a href="#setting-description-in-realm">Setting descriptions in realm</a></li>
+<li><a href="#setting-group-name-in-realm">Setting group names in realm</a></li>
+<li><a href="#setting-rules-in-realm">Setting rules in realm</a></li>
+<li><a href="#lock-groups-namefloodphotomember-in-realm">Locking group names/photos/flood/members in realm</a></li>
+<li><a href="#unlock-groups-namefloodphotomember">Unlocking group names/photos/flood/members</a></li>
+</ul>
+</li>
+<li>
+<a href="#group-setting-in-realm">Group settings in realm</a>
+
+<ul>
+<li><a href="#add-admin">Adding admins</a></li>
+<li><a href="#remove-admin">Removing admins</a></li>
+<li><a href="#adminsgroup-list-in-realm">Admin/group listing in realm</a></li>
+<li><a href="#broadcast">Broadcasting</a></li>
+<li><a href="#realm-help">Realm help</a></li>
+</ul>
+</li>
+<li>
+<a href="#global-ban-commands">Global ban commands</a>
+
+<ul>
+<li><a href="#set-group-owner">Set group owner</a></li>
+<li><a href="#bot-stats">Bot stats</a></li>
+</ul>
+</li>
+<li>
+<a href="#owners-and-mods-commands">Owner and mod commands</a>
+
+<ul>
+<li><a href="#hammer">Hammer</a></li>
+<li><a href="#group-namememberarabicfloodbots-lock">Locking a group's name/members/bots/arabic/flood</a></li>
+<li><a href="#group-namememberarabicfloodbots-unlock">Unlocking a group's name/members/bots/arabic/flood</a></li>
+<li><a href="#group-modlistrulesaboutmember-clean">Cleaning a group's modlist/rules/about/members</a></li>
+<li><a href="#set-groups-rulesabout">Seting a group's rules/about</a></li>
+<li><a href="#setting-or-changing-group-photo">Setting or changing a group's owner</a></li>
+<li><a href="#setting-or-changing-group-photo">Setting or changing a group's photo</a></li>
+<li><a href="#changing-group-name">Changing a group's name</a></li>
+<li><a href="#group-link">Group links</a></li>
+<li><a href="#promote-and-demote-mods">Promoting and demoting mods</a></li>
+<li><a href="#resolve-username">Resolving usernames</a></li>
+<li><a href="#flood-sensitivity">Flood sensitivity</a></li>
+<li><a href="#group-rules-and-about">Group rules and about</a></li>
+<li><a href="#group-settings">Group settings</a></li>
+<li><a href="#modlist">Modlist</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#owner">Owner</a></li>
+<li><a href="#save-and-get">Save and Get</a></li>
+<li><a href="#id">Id</a></li>
+<li><a href="#group-stats">Group stats</a></li>
+<li><a href="#member-list">Member list</a></li>
+<li><a href="#group-help">Group help</a></li>
+</ul>
+</li>
+<li>
+<a href="#in-private-commands">In private commands</a>
+
+<ul>
+<li><a href="#hammer">Hammer</a></li>
+<li><a href="#cleaning">Cleaning</a></li>
+<li><a href="#setting-flood-sensitivity">Setting flood sensitivity</a></li>
+<li><a href="#lock-groups-membername">Locking a group's members/name</a></li>
+<li><a href="#unlock-groups-membername">Unlocking a group's members/name</a></li>
+<li><a href="#group-link">Group link</a></li>
+<li><a href="#change-namerulesname">Changing name/rules</a></li>
+<li><a href="#group-log">Group log</a></li>
+<li><a href="#join">Join</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#installation">Installation</a>
+
+<ul>
+<li><a href="#one-command">One command</a></li>
+<li><a href="#realm-configuration">Realm configuration</a></li>
+</ul>
+</li>
+<li><a href="#support-and-development">Support and development</a></li>
+<li><a href="#special-thanks-to">Special thanks to:</a></li>
+<li><a href="#our-team">Our team!</a></li>
+</ul>
+
+<h1>
+<a id="commands" class="anchor" href="#commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h1>
+
+<h2>
+<a id="admins-commands" class="anchor" href="#admins-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Admins commands</h2>
+
+<p><strong>Only admins and sudo users can run these commands.</strong></p>
+
+<h3>
+<a id="group-creation" class="anchor" href="#group-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group creation</h3>
+
+<blockquote>
+<p>[!/]creategroup [group name]</p>
+
+<blockquote>
+<p>[!/]creategroup SEED</p>
+
+<blockquote>
+<p>will create a group</p>
+
+<p><em>Only works in realms for admins but, sudo users can use it everywhere</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="realm-creation" class="anchor" href="#realm-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Realm creation</h3>
+
+<blockquote>
+<p>[!/]createrealm [realm name]</p>
+
+<blockquote>
+<p>[!/]createrealm SEED</p>
+
+<blockquote>
+<p>will create a realm</p>
+
+<p><em>Only works in realms for admins but, sudo users can use it everywhere</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="add-or-remove-realms" class="anchor" href="#add-or-remove-realms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add or remove realms</h3>
+
+<blockquote>
+<p>[!/]add realm</p>
+
+<blockquote>
+<p>This command will add that group</p>
+</blockquote>
+
+<p>[!/]rem realm</p>
+
+<blockquote>
+<p>This command will remove that group</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="add-or-remove-groups" class="anchor" href="#add-or-remove-groups" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add or remove groups</h3>
+
+<blockquote>
+<p>[!/]add</p>
+
+<blockquote>
+<p>This command will add that group</p>
+</blockquote>
+
+<p>[!/]rem</p>
+
+<blockquote>
+<p>This command will remove that group</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="leaving" class="anchor" href="#leaving" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Leaving</h3>
+
+<blockquote>
+<p>[!/]leave</p>
+
+<blockquote>
+<p>Bot will leave that group</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="everything-about-groups" class="anchor" href="#everything-about-groups" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Everything about groups</h3>
+
+<blockquote>
+<p>[!/]all</p>
+
+<blockquote>
+<p>This command will return everything about that group</p>
+</blockquote>
+
+<p>[!/]all [group_id]</p>
+
+<blockquote>
+<p><em>Only onwer, admin and sudo users can use this command</em></p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="setting-description-in-realm" class="anchor" href="#setting-description-in-realm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting description in realm</h3>
+
+<blockquote>
+<p>[!/]setabout [group_id] [text]</p>
+
+<blockquote>
+<p>[!/]setabout 123456789 about</p>
+
+<blockquote>
+<p>This command will set [text] as description of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="setting-group-name-in-realm" class="anchor" href="#setting-group-name-in-realm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting group name in realm</h3>
+
+<blockquote>
+<p>[!/]setname [group_id] [text]</p>
+
+<blockquote>
+<p>[!/]setname 123456789 SEED</p>
+
+<blockquote>
+<p>This command will set [text] as name of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="setting-rules-in-realm" class="anchor" href="#setting-rules-in-realm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting rules in realm</h3>
+
+<blockquote>
+<p>[!/]setrules [group_id] [text]</p>
+
+<blockquote>
+<p>[!/]setrules 123456789 rules !</p>
+
+<blockquote>
+<p>This command will set [text] as rules of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="lock-groups-namefloodphotomember-in-realm" class="anchor" href="#lock-groups-namefloodphotomember-in-realm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lock groups name|flood|photo|member in realm</h3>
+
+<blockquote>
+<p>[!/]lock [group_id] [name|flood|photo|member]</p>
+
+<blockquote>
+<p>[!/]lock 123456789 name</p>
+
+<blockquote>
+<p>This command will lock name|flood|photo|member of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="unlock-groups-namefloodphotomember" class="anchor" href="#unlock-groups-namefloodphotomember" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unlock groups name|flood|photo|member</h3>
+
+<blockquote>
+<p>[!/]unlock [group_id] [name|flood|photo|member]</p>
+
+<blockquote>
+<p>[!/]unlock 123456789 name</p>
+
+<blockquote>
+<p>This command will unlock name|flood|photo|member of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h2>
+<a id="group-setting-in-realm" class="anchor" href="#group-setting-in-realm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group setting in realm</h2>
+
+<blockquote>
+<p>[!/]setting [group_id]</p>
+
+<blockquote>
+<p>[!/]setting 12345678</p>
+
+<blockquote>
+<p>This command will return settings of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="add-admin" class="anchor" href="#add-admin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add admin</h3>
+
+<blockquote>
+<p>[!/]addadmin [username]</p>
+
+<blockquote>
+<p>[!/]addadmin @username</p>
+
+<blockquote>
+<p>This command will add username as admin</p>
+
+<p><em>Only works in realms</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="remove-admin" class="anchor" href="#remove-admin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove admin</h3>
+
+<blockquote>
+<p>[!/]removeadmin [username]</p>
+
+<blockquote>
+<p>[!/]removeadmin @username</p>
+
+<blockquote>
+<p>This command will add username as admin</p>
+
+<p><em>Only works in realms</em> [username]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="adminsgroup-list-in-realm" class="anchor" href="#adminsgroup-list-in-realm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Admins|group list in realm</h3>
+
+<blockquote>
+<p>[!/]list [admins|groups]</p>
+
+<blockquote>
+<p>[!/]list groups</p>
+
+<blockquote>
+<p>This command will return admins|groups list</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="broadcast" class="anchor" href="#broadcast" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Broadcast</h3>
+
+<blockquote>
+<p>[!/]broadcast [text]</p>
+
+<blockquote>
+<p>[!/]broadcast Hello !</p>
+
+<blockquote>
+<p>This command will send text to all groups</p>
+
+<p><em>Only sudo users can run this command</em></p>
+</blockquote>
+</blockquote>
+
+<p>[!/]bc [group_id] [text]</p>
+
+<blockquote>
+<p>[!/]bc 123456789 Hello !</p>
+
+<blockquote>
+<p>This command will send text to [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h2>
+<a id="global-ban-commands" class="anchor" href="#global-ban-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Global ban commands</h2>
+
+<blockquote>
+<p>[!/]banall [id]</p>
+
+<blockquote>
+<p>[!/]banall 123456789</p>
+
+<blockquote>
+<p>This commands will globally ban [id]</p>
+</blockquote>
+</blockquote>
+
+<p>/sync_gbans</p>
+
+<blockquote>
+<p>Sync your global bans with teleseed</p>
+</blockquote>
+
+<p>[!/]unbanall [id]</p>
+
+<blockquote>
+<p>[!/]unbanall 123456789</p>
+
+<blockquote>
+<p>This commands will remove [id] from global bans</p>
+</blockquote>
+</blockquote>
+
+<p>[!/]gbanlist</p>
+
+<blockquote>
+<p>This command will return global bans ids</p>
+</blockquote>
+
+<p>[!/]banlist [group_id]</p>
+
+<blockquote>
+<p>[!/]banlist 123456789</p>
+
+<blockquote>
+<p>This command will return banned user of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="set-group-owner" class="anchor" href="#set-group-owner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set group owner</h3>
+
+<blockquote>
+<p>[!/]setgpowner [group_id] [User_id]</p>
+
+<blockquote>
+<p>[!/]setgpowner 123456789 987654321</p>
+
+<blockquote>
+<p>This command will set [User_id] as the owner of [group_id]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="bot-stats" class="anchor" href="#bot-stats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bot stats</h3>
+
+<blockquote>
+<p>[!/]stats teleseed</p>
+
+<blockquote>
+<p>This command will return bot stats</p>
+</blockquote>
+</blockquote>
+
+<h1>
+<a id="realm-help" class="anchor" href="#realm-help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Realm Help</h1>
+
+<blockquote>
+<p>[!/]help</p>
+
+<blockquote>
+<p>Get realm commands list</p>
+</blockquote>
+</blockquote>
+
+<h2>
+<a id="owners-and-mods-commands" class="anchor" href="#owners-and-mods-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>owners and mods commands</h2>
+
+<p><em>Sudo users and admins can also use this commands in all groups</em></p>
+
+<h3>
+<a id="hammer" class="anchor" href="#hammer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hammer</h3>
+
+<blockquote>
+<p>[!/]kick [username|id]</p>
+
+<blockquote>
+<p>[!/]kick @useranme
+[!/]kick 123456789</p>
+
+<blockquote>
+<p>This command will remove that user</p>
+</blockquote>
+</blockquote>
+
+<p>[!/]ban [username|id]</p>
+
+<blockquote>
+<p>[!/]ban @username
+[!/]ban 123456789</p>
+
+<blockquote>
+<p>this command will ban and remove that user</p>
+</blockquote>
+</blockquote>
+
+<p>[!/]unban [id]</p>
+
+<blockquote>
+<p>[!/]unban 12345678</p>
+
+<blockquote>
+<p>This command will unban that user</p>
+</blockquote>
+</blockquote>
+
+<p>[!/]banlist</p>
+
+<blockquote>
+<p>This command will return bans list</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-namememberarabicfloodbots-lock" class="anchor" href="#group-namememberarabicfloodbots-lock" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>group name|member|arabic|flood|bots lock</h3>
+
+<blockquote>
+<p>[!/]lock [name|member|arabic|flood|bots]</p>
+
+<blockquote>
+<p>[!/]lock flood</p>
+
+<blockquote>
+<p>This command will lock name|member|arabic|flood|bots of groups</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-namememberarabicfloodbots-unlock" class="anchor" href="#group-namememberarabicfloodbots-unlock" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>group name|member|arabic|flood|bots unlock</h3>
+
+<blockquote>
+<p>[!/]unlock [name|member|arabic|flood|bots]</p>
+
+<blockquote>
+<p>[!/]unlock flood</p>
+
+<blockquote>
+<p>This command will unlock name|member|arabic|flood|bots of groups</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-modlistrulesaboutmember-clean" class="anchor" href="#group-modlistrulesaboutmember-clean" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group modlist|rules|about|member clean</h3>
+
+<blockquote>
+<p>[!/]clean [modlist|rules|about|member]</p>
+
+<blockquote>
+<p>[!/]clean modlist</p>
+
+<blockquote>
+<p>This command will clean modlist|rules|about|member
+<em>/clean member will kick all users except owner,admins and bot and it's for owners only</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="set-groups-rulesabout" class="anchor" href="#set-groups-rulesabout" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Set groups rules|about</h3>
+
+<blockquote>
+<p>[!/]set [rules|about] [text]</p>
+
+<blockquote>
+<p>[!/]set rules don't spam!</p>
+
+<p>No NSFW</p>
+
+<blockquote>
+<p>This command will set [text] as the rules|about of groups</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="setting-or-changing-group-owner" class="anchor" href="#setting-or-changing-group-owner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting or changing group owner</h3>
+
+<blockquote>
+<p>[!/]setowner [id]</p>
+
+<blockquote>
+<p>[!/]setowner 123456789</p>
+
+<blockquote>
+<p>This command will set id as owner of that group</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="setting-or-changing-group-photo" class="anchor" href="#setting-or-changing-group-photo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting or changing group photo</h3>
+
+<blockquote>
+<p>[!/]setphoto</p>
+
+<blockquote>
+<p>This command will change or set group photo
+<em>also locks photo</em></p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="changing-group-name" class="anchor" href="#changing-group-name" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing Group name</h3>
+
+<blockquote>
+<p>[!/]setname [name]</p>
+
+<blockquote>
+<p>[!/]setname SEED</p>
+
+<blockquote>
+<p>This command will set [name] as name of groups</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-link" class="anchor" href="#group-link" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group link</h3>
+
+<blockquote>
+<p>[!/]newlink</p>
+
+<blockquote>
+<p>This command will revoke group link</p>
+</blockquote>
+
+<p>[!/]link</p>
+
+<blockquote>
+<p>This command will return group link</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="promote-and-demote-mods" class="anchor" href="#promote-and-demote-mods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Promote and demote mods</h3>
+
+<blockquote>
+<p>[!/]promote [username]</p>
+
+<blockquote>
+<p>[!/]promote @username</p>
+
+<blockquote>
+<p>This command will promote @username as moderator</p>
+</blockquote>
+</blockquote>
+
+<p>[!/]demote [username]</p>
+
+<blockquote>
+<p>[!/]demote @username</p>
+
+<blockquote>
+<p>This command will demote @username</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="resolve-username" class="anchor" href="#resolve-username" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resolve username</h3>
+
+<blockquote>
+<p>[!/]res [username]</p>
+
+<blockquote>
+<p>[!/]res @username</p>
+
+<blockquote>
+<p>This command will return info about that username</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="flood-sensitivity" class="anchor" href="#flood-sensitivity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flood sensitivity</h3>
+
+<blockquote>
+<p>[!/]setflood [value]</p>
+
+<blockquote>
+<p>[!/]setflood 15</p>
+
+<blockquote>
+<p>will set flood sensitivity to [value]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-rules-and-about" class="anchor" href="#group-rules-and-about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group rules and about</h3>
+
+<blockquote>
+<p>[!/]about</p>
+
+<blockquote>
+<p>This command will return group description</p>
+</blockquote>
+
+<p>[!/]rules</p>
+
+<blockquote>
+<p>This command will return group rules</p>
+
+<blockquote>
+<p><em>normal users can use it too</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-settings" class="anchor" href="#group-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group settings</h3>
+
+<blockquote>
+<p>[!/]setting</p>
+
+<blockquote>
+<p>This command will return group settings</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="modlist" class="anchor" href="#modlist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>modlist</h3>
+
+<blockquote>
+<p>[!/]modlist</p>
+
+<blockquote>
+<p>This command will return group moderators</p>
+
+<blockquote>
+<p><em>normal users can use it too</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="help" class="anchor" href="#help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help</h3>
+
+<blockquote>
+<p>[!/]help</p>
+</blockquote>
+
+<h3>
+<a id="owner" class="anchor" href="#owner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Owner</h3>
+
+<blockquote>
+<p>[!/]owner</p>
+
+<blockquote>
+<p>This command will return owners id</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="save-and-get" class="anchor" href="#save-and-get" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Save and get</h3>
+
+<blockquote>
+<p>[!/]save [title] [text]</p>
+
+<blockquote>
+<p>[!/]save spam Don't spam !</p>
+
+<blockquote>
+<p>This command will save text as that title</p>
+</blockquote>
+</blockquote>
+
+<p>[!/]get [title]</p>
+
+<blockquote>
+<p>[!/]get spam</p>
+
+<blockquote>
+<p>This command will return text of that title</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="id" class="anchor" href="#id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Id</h3>
+
+<blockquote>
+<p>[!/]id</p>
+
+<blockquote>
+<p>This command will return user or group id
+<em>can be triggered by reply</em></p>
+
+<p><em>Normal users can use it</em></p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-stats" class="anchor" href="#group-stats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>group stats</h3>
+
+<blockquote>
+<p>[!/]stats</p>
+
+<blockquote>
+<p>This command will return group message statistic in a .txt file</p>
+</blockquote>
+
+<p>[!/]statslist</p>
+
+<blockquote>
+<p>This command will return group message statistic</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="member-list" class="anchor" href="#member-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>member list</h3>
+
+<blockquote>
+<p>[!/]who</p>
+
+<blockquote>
+<p>This command will return member list in a .txt file</p>
+</blockquote>
+
+<p>[!/]wholist</p>
+
+<blockquote>
+<p>This command will return member list</p>
+</blockquote>
+</blockquote>
+
+<h1>
+<a id="group-help" class="anchor" href="#group-help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group Help</h1>
+
+<blockquote>
+<p>[!/]help</p>
+
+<blockquote>
+<p>Get commands list</p>
+</blockquote>
+</blockquote>
+
+<h2>
+<a id="in-private-commands" class="anchor" href="#in-private-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>in private commands</h2>
+
+<p><strong>These commands only works in bots private</strong></p>
+
+<h3>
+<a id="hammer-1" class="anchor" href="#hammer-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hammer</h3>
+
+<blockquote>
+<p>[!/]owners group_id [kick|ban|unban] user_id</p>
+
+<blockquote>
+<p>[!/]owners 1234567 kick 1234567</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="cleaning" class="anchor" href="#cleaning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>cleaning</h3>
+
+<blockquote>
+<p>[!/]owners group_id clean  [modlist|rules|about]</p>
+
+<blockquote>
+<p>[!/]owners 1234567 clean modlist</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="setting-flood-sensitivity" class="anchor" href="#setting-flood-sensitivity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>setting flood sensitivity</h3>
+
+<blockquote>
+<p>[!/]owners group_id setflood value</p>
+
+<blockquote>
+<p>[!/]owners 1234567 setflood 17</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="lock-groups-membername" class="anchor" href="#lock-groups-membername" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>lock groups member|name</h3>
+
+<blockquote>
+<p>[!/]owners group_id lock [member|name]</p>
+
+<blockquote>
+<p>[!/]owners 1234567 lock member</p>
+</blockquote>
+</blockquote>
+
+<h4>
+<a id="unlock-groups-membername" class="anchor" href="#unlock-groups-membername" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>unlock groups member|name</h4>
+
+<blockquote>
+<p>[!/]owner group_id unlock [member|name]</p>
+
+<blockquote>
+<p>[!/]owners 1234567 unlock name</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-link-1" class="anchor" href="#group-link-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group link</h3>
+
+<blockquote>
+<p>[!/]owners group_id get link</p>
+
+<blockquote>
+<p>[!/]owners 1234567 get link</p>
+</blockquote>
+
+<p>[!/]owners group_id new link</p>
+
+<blockquote>
+<p>[!/]owners 1234567 new link</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="change-namerulesname" class="anchor" href="#change-namerulesname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>change name|rules|name</h3>
+
+<blockquote>
+<p>[!/]changename [group_id] [name]</p>
+
+<blockquote>
+<p>[!/]changename 123456789 SEED</p>
+</blockquote>
+
+<p>[!/]changrules [group_id] [rules]</p>
+
+<blockquote>
+<p>[!/]changrules 123456789 rules !</p>
+</blockquote>
+
+<p>[!/]changeabout [group_id] [about]</p>
+
+<blockquote>
+<p>[!/]changeabout 123456789 about !</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="group-log" class="anchor" href="#group-log" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Group log</h3>
+
+<blockquote>
+<p>[!/]loggroup [group_id]</p>
+
+<blockquote>
+<p>[!/]loggroup 123456789</p>
+</blockquote>
+</blockquote>
+
+<h3>
+<a id="join" class="anchor" href="#join" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Join</h3>
+
+<blockquote>
+<p>[!/]oin [group_id]</p>
+
+<blockquote>
+<p>This command will add user in [group_id]</p>
+</blockquote>
+</blockquote>
+
+<p><strong>U can use both "/" and "!"</strong></p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># Install dependencies.</span>
+<span class="pl-c"># Tested on Ubuntu 14.04. For other OSs, check out https://github.com/yagop/telegram-bot/wiki/Installation</span>
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make autoconf unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev
+
+<span class="pl-c"># Let's install the bot.</span>
+<span class="pl-c1">cd</span> <span class="pl-smi">$HOME</span>
+git clone https://github.com/SEEDTEAM/TeleSeed.git
+<span class="pl-c1">cd</span> TeleSeed
+chmod +x launch.sh
+./launch.sh install
+./launch.sh <span class="pl-c"># Enter a phone number &amp; confirmation code.</span></pre></div>
+
+<h3>
+<a id="one-command" class="anchor" href="#one-command" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>One command</h3>
+
+<p>To install everything in one command (useful for VPS deployment) on Debian-based distros, use:</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c">#https://github.com/yagop/telegram-bot/wiki/Installation</span>
+sudo apt-get update<span class="pl-k">;</span> sudo apt-get upgrade -y --force-yes<span class="pl-k">;</span> sudo apt-get dist-upgrade -y --force-yes<span class="pl-k">;</span> sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson<span class="pl-k">*</span> libpython-dev make autoconf unzip git redis-server g++ -y --force-yes <span class="pl-k">&amp;&amp;</span> git clone https://github.com/SEEDTEAM/TeleSeed.git <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">cd</span> TeleSeed <span class="pl-k">&amp;&amp;</span> chmod +x launch.sh <span class="pl-k">&amp;&amp;</span> ./launch.sh install <span class="pl-k">&amp;&amp;</span> ./launch.sh</pre></div>
+
+<h3>
+<a id="realm-configuration" class="anchor" href="#realm-configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Realm configuration</h3>
+
+<p>After you run the bot for first time, send it <code>!id</code>. Get your ID and stop the bot.</p>
+
+<p>Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:</p>
+
+<pre><code>  sudo_users = {
+    110626080,
+    103649648,
+    111020322,
+    0,
+    YourID
+  }
+</code></pre>
+
+<p>Then restart the bot.</p>
+
+<p>Create a realm using the <code>!createrealm</code> command.</p>
+
+<h1>
+<a id="support-and-development" class="anchor" href="#support-and-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support and development</h1>
+
+<p>Check out this <a href="http://telegramgeeks.com/2016/01/teleseed-tutorial/">tutorial by Telegram Geeks</a> for further assistance with setup and installation.</p>
+
+<p><strong>Do not contact us</strong> in private for support.
+Join our bot development group by sending <code>/join 56670147</code> to <a href="https://telegram.me/TeleSeed">@TeleSeed</a></p>
+
+<h1>
+<a id="special-thanks-to" class="anchor" href="#special-thanks-to" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Special thanks to</h1>
+
+<p><a href="https://telegram.me/seyedan25">@seyedan25</a></p>
+
+<p>For managing <a href="https://telegram.me/TeleSeed">@teleseed</a> on Telegram.</p>
+
+<p><a href="https://telegram.me/Vamptacus">@Vamptacus</a></p>
+
+<p>For graphic designs.</p>
+
+<p><a href="https://github.com/topkecleon">topkecleon</a></p>
+
+<p><a href="https://github.com/JuanPotato">Juan Potato</a></p>
+
+<h1>
+<a id="our-team" class="anchor" href="#our-team" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our team!</h1>
+
+<p><a href="https://github.com/hmon">Alphonse</a> (<a href="https://telegram.me/iwals">Telegram</a>)</p>
+
+<p><a href="https://github.com/imandaneshi">I M /-\ N</a> (<a href="https://telegram.me/imandaneshi">Telegram</a>)</p>
+
+<p><a href="https://github.com/Siyanew">Siyanew</a> (<a href="https://telegram.me/Siyanew">Telegram</a>)</p>
+
+<p><a href="https://github.com/Rondoozle">Rondoozle</a> (<a href="https://telegram.me/POTUS">Telegram</a>)</p>
+
+<h3>
+<a id="our-telegram-channels" class="anchor" href="#our-telegram-channels" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our Telegram channels:</h3>
+
+<p>English: <a href="https://telegram.me/teleseedch">@TeleSeedCH</a></p>
+
+<p>Persian: <a href="https://telegram.me/iranseed">@IranSeed</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/zeuosageenti/-G-F-z">-g-f-z</a> is maintained by <a href="https://github.com/zeuosageenti">zeuosageenti</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
